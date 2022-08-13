@@ -2,7 +2,7 @@ import * as React from 'react';
 
 function Templates(){
     return(
-        <div>
+        <div className='tabs'>
             <p>Template Filler For Now</p>
         </div>
     );

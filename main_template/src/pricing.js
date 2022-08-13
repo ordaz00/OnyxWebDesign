@@ -2,7 +2,7 @@ import * as React from 'react';
 
 function Pricing(){
     return(
-        <div>
+        <div className='tabs'>
             <p>Pricing Filler For Now</p>
         </div>
     );

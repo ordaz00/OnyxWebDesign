@@ -2,7 +2,7 @@ import * as React from 'react';
 
 function Contact(){
     return(
-        <div>
+        <div className='tabs'>
             <p>Contact Filler For Now</p>
         </div>
     );
