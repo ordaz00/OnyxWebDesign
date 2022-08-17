@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Tabs, Tab} from 'baseui/tabs-motion';
+import {Tabs, Tab, FILL} from 'baseui/tabs-motion';
 import Home from './home';
 import Pricing from './pricing';
 import Templates from './templates';
@@ -14,7 +14,9 @@ function TabBar(){
              onChange={({ activeKey }) => {
                setActiveKey(activeKey);
              }}
+             overrides={{Root:{style:{width: "1100px"}}}}
              activeKey={activeKey}
+             fill={FILL.fixed}
            >
              <Tab title="Home">
               <Home></Home>

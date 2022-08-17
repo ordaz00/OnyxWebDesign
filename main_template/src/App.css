@@ -2,14 +2,27 @@
   text-align: center;
 }
 
-#home{
+#tabBar{
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
+#templates{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#home{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 .tabs{
-  height: 700px;
+  height: 550px;
 }
 
 p{
@@ -26,6 +39,16 @@ p{
   background-color: #282c34;
   height: 100px;
   color: white;
+}
+
+#selfDesignSlogan{
+  font-size: 30px;
+}
+
+#contactUsButton{
+  width: 250px;
+  height: 30px;
+  font-size: 20px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
