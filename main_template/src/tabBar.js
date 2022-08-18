@@ -5,9 +5,11 @@ import Pricing from './pricing';
 import Templates from './templates';
 import Contact from './contact';
 import About from './about';
+import { useStyletron } from 'styletron-react';
 
-function TabBar(){
+function TabBar(props){
     const [activeKey, setActiveKey] = React.useState("0");
+    let [css] = useStyletron();
     return(
         <div id="tabBar">
            <Tabs
@@ -18,20 +20,22 @@ function TabBar(){
              activeKey={activeKey}
              fill={FILL.fixed}
            >
-             <Tab title="Home">
-              <Home></Home>
+             <Tab title="Home" className={css({fontSize: "20px !important"})}>
+              <Home />
              </Tab>
-             <Tab title="Pricing">
-              <Pricing></Pricing>
+             <Tab title="Pricing" className={css({fontSize: "20px !important"})}>
+              <Pricing />
              </Tab>
-             <Tab title="Templates">
-              <Templates></Templates>
+             <Tab title="Templates" className={css({fontSize: "20px !important"})}>
+              <Templates
+                updatePage = {props.updatePage}
+              />
              </Tab>
-             <Tab title="Contact Us">
-              <Contact></Contact>
+             <Tab title="Contact Us" className={css({fontSize: "20px !important"})}>
+              <Contact />
              </Tab>
-             <Tab title="About Us">
-              <About></About>
+             <Tab title="About Us" className={css({fontSize: "20px !important"})}>
+              <About />
              </Tab>
            </Tabs>
         </div>

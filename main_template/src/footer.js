@@ -1,7 +1,7 @@
 import * as React from 'react';
 import "./App.css"
 
-function Footer(){
+function Footer(props){
     return(
         <div id='footer'>
             <p>

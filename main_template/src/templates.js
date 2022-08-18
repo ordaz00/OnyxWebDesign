@@ -3,8 +3,13 @@ import {Card, StyledAction} from 'baseui/card';
 import {Button, KIND, SIZE, SHAPE} from 'baseui/button';
 import { useStyletron } from 'styletron-react';
 
-function Templates(){
+function Templates(props){
   let [css] = useStyletron();
+
+  function pageChange(){
+    props.updatePage("templates");
+  }
+
   const CONCERTS = [
     {
       eventDateName: "Jón Jónsson og Friðrik Dór - fjölskyldutónleikar",
@@ -70,12 +75,12 @@ function Templates(){
                 >
                   <StyledAction>
                     <Button
-                      onClick={() => alert("click")}
+                      onClick={pageChange}
                       kind={KIND.primary}
                       size={SIZE.default}
                       shape={SHAPE.default}
                       overrides={{BaseButton:{style:{width: "100%"}}}}
-                      className={css({fontSize: "20px"})}
+                      className={css({fontSize: "20px !important"})}
                     >
                       Select
                     </Button>
