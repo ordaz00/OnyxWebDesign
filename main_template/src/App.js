@@ -1,40 +1,30 @@
 import * as React from 'react';
+import './App.css';
 import Header from './header';
 import TabBar from './tabBar';
 import Footer from './footer';
-import './App.css';
-import TemplatesPage from './templatesPage';
+import TemplatesSelectorPage from './templatesSelectorPage';
+import Questions from './questions';
 
 function App() {
   let [page, changePage] = React.useState("main")
+  
   function updatePage(newPage){
     changePage(newPage);
   }
-  if(page == "main"){
-    return (
-      <div className="App">
-        <Header />
-        <TabBar
-          updatePage = {updatePage}
-        />
-        <Footer
-          updatePage = {updatePage}
-        />
-      </div>
-    );
-  }else if(page == "templates"){
-    return(
-      <div className="App">
-        <Header />
-        <TemplatesPage
-          updatePage = {updatePage} 
-        />
-        <Footer
-          updatePage = {updatePage}
-        />
-      </div>
-    );
-  }
+
+  let dict = {"main": <TabBar updatePage = {updatePage} />, "templates": <TemplatesSelectorPage updatePage = {updatePage} />, "questions": <Questions updatePage = {updatePage} />};
+  let middleSection = dict[page];
+
+  return (
+    <div className="App">
+      <Header />
+      {middleSection}
+      <Footer
+        updatePage = {updatePage}
+      />
+    </div>
+  );
 }
 
 export default App;
