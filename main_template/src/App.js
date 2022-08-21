@@ -5,6 +5,7 @@ import TabBar from './tabBar';
 import Footer from './footer';
 import TemplatesSelectorPage from './templatesSelectorPage';
 import Questions from './questions';
+import FileUpload from './fileUpload';
 
 function App() {
   let [page, changePage] = React.useState("main")
@@ -13,7 +14,7 @@ function App() {
     changePage(newPage);
   }
 
-  let dict = {"main": <TabBar updatePage = {updatePage} />, "templates": <TemplatesSelectorPage updatePage = {updatePage} />, "questions": <Questions updatePage = {updatePage} />};
+  let dict = {"main": <TabBar updatePage = {updatePage} />, "templates": <TemplatesSelectorPage updatePage = {updatePage} />, "questions": <Questions updatePage = {updatePage} />, "fileUpload": <FileUpload updatePage = {updatePage}/>};
   let middleSection = dict[page];
 
   return (
