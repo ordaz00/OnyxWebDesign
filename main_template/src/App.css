@@ -9,6 +9,11 @@
   align-self: flex-start;
 }
 
+#fileUpload{
+  height: 550px;
+  width: 100%;
+}
+
 .whiteButton{
   background: white;
 }
