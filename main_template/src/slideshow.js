@@ -14,7 +14,7 @@ function SlideShow(props){
     let delay = props.delay;
 
     function pageChange(){
-        props.updatePage("fileUpload");
+        props.updatePage(2);
       }
     
     function updateButtonColor(ind){

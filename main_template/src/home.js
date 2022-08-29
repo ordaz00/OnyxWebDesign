@@ -4,7 +4,7 @@ import {Button, KIND, SIZE, SHAPE} from 'baseui/button';
 import { useStyletron } from 'styletron-react';
 import SlideShow from './slideshow';
 
-function Home(){
+function Home(props){
   let [css] = useStyletron();
   const colors = ["#0088FE", "#00C49F", "#FFBB28"];
   const delay = 2500;
@@ -38,6 +38,7 @@ function Home(){
         getHeight = {"500px"}
         images = {colors}
         delay = {delay}
+        updatePage = {props.updatePage}
       />
     </div>
   );

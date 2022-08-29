@@ -10,6 +10,9 @@ import { useStyletron } from 'styletron-react';
 function TabBar(props){
     const [activeKey, setActiveKey] = React.useState("0");
     let [css] = useStyletron();
+    function switchTab(key){
+      setActiveKey(key);
+    }
     return(
         <div id="tabBar">
            <Tabs
@@ -21,7 +24,7 @@ function TabBar(props){
              fill={FILL.fixed}
            >
              <Tab title="Home" className={css({fontSize: "20px !important"})}>
-              <Home />
+              <Home updatePage = {switchTab} />
              </Tab>
              <Tab title="Pricing" className={css({fontSize: "20px !important"})}>
               <Pricing />
