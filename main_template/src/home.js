@@ -5,9 +5,15 @@ import { useStyletron } from 'styletron-react';
 import SlideShow from './slideshow';
 
 function Home(props){
+
+  function pageChange(){
+    props.updatePage(2);
+  }
+
   let [css] = useStyletron();
   const colors = ["#0088FE", "#00C49F", "#FFBB28"];
   const delay = 2500;
+  
   return(
     <div className='tabs' id='home'>
       <Card overrides={{Root:{style:{width:"500px", height: "500px", margin: "25px"}}}}>
@@ -22,7 +28,7 @@ function Home(props){
         </StyledBody>
         <StyledAction>
           <Button
-            onClick={() => alert("click")}
+            onClick={pageChange}
             kind={KIND.primary}
             size={SIZE.default}
             shape={SHAPE.default}

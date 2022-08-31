@@ -15,7 +15,7 @@ function SlideShow(props){
 
     function pageChange(){
         props.updatePage(2);
-      }
+    }
     
     function updateButtonColor(ind){
         for(let i = 0; i < colors.length; i++){
@@ -88,7 +88,7 @@ function SlideShow(props){
                             shape={SHAPE.pill}
                             key={index}
                             id={color + index}
-                            className={((index == 0) ? css({background: "red"}):css({background: "white"}))}
+                            className={((index === 0) ? css({background: "red"}):css({background: "white"}))}
                         >
                         </Button>
                     ))}

@@ -9,10 +9,13 @@ import { Client as Styletron } from "styletron-engine-atomic";
 const engine = new Styletron();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+let answers = [];
+
 root.render(
   <React.StrictMode>
     <StyletronProvider value={engine}>
-      <App />
+      <App answers = {answers}/>
     </StyletronProvider>
   </React.StrictMode>
 );
